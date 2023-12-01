@@ -1,6 +1,6 @@
 package racingcar.model
 
-class Cars(val cars: List<Car>) {
+class Cars(private val cars: List<Car>) {
     init {
         require(cars.size == cars.distinctBy { it.name }.size) {throw IllegalArgumentException(CAR_NAME_DUPLICATED)}
         require(cars.size >= CAR_NUM_MIN) {throw IllegalArgumentException(CAR_NUM_UNDER_MIN.format(CAR_NUM_MIN))}
@@ -8,7 +8,7 @@ class Cars(val cars: List<Car>) {
 
     }
 
-    constructor(input: String) : this(input.split(",").map { Car(it, 0) })
+    constructor(input: String) : this(input.split(",").map { Car(it.trim(), 0) })
 
     companion object {
         const val CAR_NUM_MIN = 2
