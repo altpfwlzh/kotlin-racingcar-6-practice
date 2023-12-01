@@ -1,4 +1,4 @@
 package racingcar.model;
 
-class Car(private val name: String, private val position: Int) {
+class Car(val name: String, val position: Int) {
 }
