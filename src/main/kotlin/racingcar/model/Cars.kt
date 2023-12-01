@@ -5,10 +5,15 @@ class Cars(private val cars: List<Car>) {
         require(cars.size == cars.distinctBy { it.name }.size) {throw IllegalArgumentException(CAR_NAME_DUPLICATED)}
         require(cars.size >= CAR_NUM_MIN) {throw IllegalArgumentException(CAR_NUM_UNDER_MIN.format(CAR_NUM_MIN))}
         require(cars.size <= CAR_NUM_MAX) {throw IllegalArgumentException(CAR_NUM_OVER_MAX.format(CAR_NUM_MAX))}
-
     }
 
     constructor(input: String) : this(input.split(",").map { Car(it.trim(), 0) })
+
+    fun runCars(standardSpeed: Int) {
+        cars.forEach {
+            it.moveForwardIfOverStandardSpeed(standardSpeed)
+        }
+    }
 
     companion object {
         const val CAR_NUM_MIN = 2

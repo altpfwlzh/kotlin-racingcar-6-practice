@@ -14,6 +14,8 @@ class GameController(
 ) {
     fun run() {
         val racing: Racing = Racing(receiveCars(), receiveTryCnt())
+
+        racing.runRacing()
     }
 
     private fun receiveCars(): Cars {

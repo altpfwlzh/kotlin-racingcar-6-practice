@@ -1,6 +1,6 @@
 package racingcar.model;
 
-class TryCount(private val count: Int) {
+class TryCount(val count: Int) {
     init {
         require(count >= MIN_CNT) {throw IllegalArgumentException(CNT_NOT_IN_RANGE.format(MIN_CNT, MAX_CNT))}
         require(count <= MAX_CNT) {throw IllegalArgumentException(CNT_NOT_IN_RANGE.format(MIN_CNT, MAX_CNT))}
