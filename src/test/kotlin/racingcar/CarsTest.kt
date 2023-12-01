@@ -19,4 +19,11 @@ class CarsTest {
             Cars("1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16")
         }
     }
+
+    @Test
+    fun `동일한 이름의 차가 입력되면 예외가 발생한다`() {
+        assertThrows<IllegalArgumentException> {
+            Cars("sh,sh")
+        }
+    }
 }
