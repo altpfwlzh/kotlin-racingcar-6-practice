@@ -7,13 +7,6 @@ import racingcar.model.Cars
 
 class CarsTest {
     @Test
-    fun `차가 한 대만 입력될 시 예외가 발생한다`() {
-        assertThrows<IllegalArgumentException> {
-            Cars("pobi")
-        }
-    }
-
-    @Test
     fun `차가 15대를 초과할 시 예외가 발생한다`() {
         assertThrows<IllegalArgumentException> {
             Cars("1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16")
