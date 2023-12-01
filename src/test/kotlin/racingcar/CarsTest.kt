@@ -26,4 +26,18 @@ class CarsTest {
             Cars("sh,sh")
         }
     }
+
+    @Test
+    fun `차이름이 5글자를 넘어가면 예외가 발생한다`() {
+        assertThrows<IllegalArgumentException> {
+            Cars("여섯글자예요,다섯글자야")
+        }
+    }
+
+    @Test
+    fun `차이름이 공백이면 예외가 발생한다`() {
+        assertThrows<IllegalArgumentException> {
+            Cars("1, ,16")
+        }
+    }
 }
