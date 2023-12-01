@@ -27,7 +27,7 @@ class Cars(private val cars: List<Car>) {
     }
 
     companion object {
-        const val CAR_NUM_MIN = 1
+        const val CAR_NUM_MIN = 2
         const val CAR_NUM_MAX = 15
 
         const val CAR_NUM_UNDER_MIN = "차를 %d 대 이상 입력해야 합니다."
