@@ -11,6 +11,8 @@ class Racing(private val cars: Cars, private val tryCnt: TryCount) {
         }
     }
 
+    fun printWinners() = println(cars.calculateWinners().joinToString(",") { it.name })
+
     companion object {
         const val STANDARD_SPEED = 4
     }

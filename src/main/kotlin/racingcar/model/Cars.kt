@@ -21,6 +21,11 @@ class Cars(private val cars: List<Car>) {
         }
     }
 
+    fun calculateWinners(): List<Car> {
+        val maxPosition: Int = cars.maxOf { it.position }
+        return cars.filter { it.position == maxPosition }
+    }
+
     companion object {
         const val CAR_NUM_MIN = 2
         const val CAR_NUM_MAX = 15

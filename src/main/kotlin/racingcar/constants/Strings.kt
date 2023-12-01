@@ -5,5 +5,5 @@ object Strings {
     const val OUTPUT_TRY_COUNT = "시도할 횟수는 몇 회인가요?"
 
     const val OUTPUT_TRY_RESULT = "실행 결과"
-    const val OUTPUT_FINAL_WINNER = "최종 우승자"
+    const val OUTPUT_FINAL_WINNER = "최종 우승자 : "
 }

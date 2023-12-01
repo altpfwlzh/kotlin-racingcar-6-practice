@@ -23,5 +23,7 @@ class OutputView() {
         println("$name : $positionResult")
     }
 
+    fun outputWinner() = print(strings.OUTPUT_FINAL_WINNER)
+
     fun outputLineBlank() = println()
 }

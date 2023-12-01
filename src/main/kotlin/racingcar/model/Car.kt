@@ -3,7 +3,10 @@ package racingcar.model;
 import racingcar.util.RandNumGenerator
 import racingcar.view.OutputView
 
-class Car(val name: String, private var position: Int) {
+class Car(val name: String, position: Int) {
+    var position: Int = position
+        private set
+
     init {
         require(name.isNotEmpty()) { throw IllegalArgumentException(NAME_EMPTY) }
         require(name.length <= NAME_SIZE_MAX) { throw IllegalArgumentException(NAME_SIZE_OVER_MAX.format(NAME_SIZE_MAX)) }
