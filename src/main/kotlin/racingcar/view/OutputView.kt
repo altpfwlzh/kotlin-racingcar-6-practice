@@ -8,4 +8,6 @@ class OutputView() {
     private val errorMessage: ErrorMessage = ErrorMessage
 
     fun outputCars() = println(strings.OUTPUT_CARS)
+
+    fun outputTryCnt() = println(strings.OUTPUT_TRY_COUNT)
 }

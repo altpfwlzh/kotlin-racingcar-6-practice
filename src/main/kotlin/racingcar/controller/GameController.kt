@@ -22,7 +22,8 @@ class GameController(
     }
 
     private fun receiveTryCnt(): TryCount {
-        return TryCount(1)
+        outputView.outputTryCnt()
+        return TryCount(inputView.inputInt())
     }
 
 

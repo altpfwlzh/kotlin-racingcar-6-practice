@@ -15,7 +15,7 @@ class Validator {
     }
 
     private fun checkEmpty(input: String) {
-        if(input.isEmpty()) throw IllegalArgumentException(errorMessage.INPUT_EMPTY)
+        if(input.trim().isEmpty()) throw IllegalArgumentException(errorMessage.INPUT_EMPTY)
     }
 
     private fun checkTypeInt(input: String) {
