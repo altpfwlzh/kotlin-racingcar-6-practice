@@ -1,6 +1,7 @@
 package racingcar.model;
 
 import racingcar.util.RandNumGenerator
+import racingcar.view.OutputView
 
 class Car(val name: String, var position: Int) {
     init {
@@ -14,6 +15,10 @@ class Car(val name: String, var position: Int) {
 
     private fun isSpeedOverStandard(standardSpeed: Int): Boolean =
         (RandNumGenerator().generateRandNum(RAND_START_NUM, RAND_END_NUM) >= standardSpeed)
+
+    fun printCar() {
+        OutputView().outputCar(name, position)
+    }
 
     companion object {
         const val NAME_SIZE_MAX = 5

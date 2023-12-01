@@ -9,9 +9,15 @@ class Cars(private val cars: List<Car>) {
 
     constructor(input: String) : this(input.split(",").map { Car(it.trim(), 0) })
 
-    fun runCars(standardSpeed: Int) {
+    fun runCarsOneTurn(standardSpeed: Int) {
         cars.forEach {
             it.moveForwardIfOverStandardSpeed(standardSpeed)
+        }
+    }
+
+    fun printCars() {
+        cars.forEach {
+            it.printCar()
         }
     }
 
