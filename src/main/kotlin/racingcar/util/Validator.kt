@@ -5,6 +5,15 @@ import racingcar.constants.ErrorMessage
 class Validator {
     private val errorMessage: ErrorMessage = ErrorMessage
 
+    fun checkString(input: String) {
+        checkEmpty(input)
+    }
+
+    fun checkInt(input: String) {
+        checkEmpty(input)
+        checkTypeInt(input)
+    }
+
     private fun checkEmpty(input: String) {
         if(input.isEmpty()) throw IllegalArgumentException(errorMessage.INPUT_EMPTY)
     }
