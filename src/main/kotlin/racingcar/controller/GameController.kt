@@ -17,8 +17,8 @@ class GameController(
     }
 
     private fun receiveCars(): Cars {
-        inputView.inputString()
-        TODO()//return Cars()
+        outputView.outputCars()
+        return Cars(inputView.inputString())
     }
 
     private fun receiveTryCnt(): TryCount {
