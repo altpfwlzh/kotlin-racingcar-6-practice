@@ -17,5 +17,4 @@ class InputView {
         validator.checkInt(input)
         return input.toInt()
     }
-
 }

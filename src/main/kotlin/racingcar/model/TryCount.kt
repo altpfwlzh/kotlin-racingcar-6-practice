@@ -1,4 +1,4 @@
-package racingcar.model;
+package racingcar.model
 
 class TryCount(val count: Int) {
     init {

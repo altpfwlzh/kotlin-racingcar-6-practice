@@ -11,7 +11,7 @@ class GameController(
     private val outputView: OutputView,
 ) {
     fun run() {
-        val racing: Racing = Racing(receiveCars(), receiveTryCnt())
+        val racing = Racing(receiveCars(), receiveTryCnt())
 
         printRacingResult(racing)
 

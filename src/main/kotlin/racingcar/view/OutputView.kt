@@ -1,13 +1,9 @@
 package racingcar.view
 
-import racingcar.constants.ErrorMessage
 import racingcar.constants.Strings
-import racingcar.model.Car
-import racingcar.model.Cars
 
-class OutputView() {
+class OutputView {
     private val strings: Strings = Strings
-    private val errorMessage: ErrorMessage = ErrorMessage
 
     fun outputCars() = println(strings.OUTPUT_CARS)
 
