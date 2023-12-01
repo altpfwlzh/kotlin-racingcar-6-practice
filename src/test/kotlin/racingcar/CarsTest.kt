@@ -2,12 +2,21 @@ package racingcar
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 import racingcar.model.Cars
 
 class CarsTest {
     @Test
-    fun `String을 넣었을 때 올바르게 들어가는지 확인`() {
-        val result = Cars("pobi,woni,jun")
-        Assertions.assertEquals(result, "[pobi,woni,jun]")
+    fun `차가 한 대만 입력될 시 예외가 발생한다`() {
+        assertThrows<IllegalArgumentException> {
+            Cars("pobi")
+        }
+    }
+
+    @Test
+    fun `차가 15대를 초과할 시 예외가 발생한다`() {
+        assertThrows<IllegalArgumentException> {
+            Cars("1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16")
+        }
     }
 }
